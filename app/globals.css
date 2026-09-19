@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-deep: #08090D;
+    --bg-surface: #0E121B;
+    --bg-card: #121724;
+    --bg-card-hover: #182032;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(0, 240, 139, 0.4);
+    --accent-lime: #00F08B;
+    --accent-cyan: #00D4FF;
+    --accent-silver: #E2E8F0;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    selection-background-color: #00F08B;
+    selection-color: #08090D;
+  }
+
+  /* Custom sleek scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #08090D;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E2638;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00F08B;
+  }
+}
+
+/* Metallic gradient utilities */
+.metallic-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-silver-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 60%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lime-glow {
+  text-shadow: 0 0 24px rgba(0, 240, 139, 0.35);
+}
+
+.glass-panel {
+  background: rgba(14, 18, 27, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-glow {
+  background: rgba(14, 18, 27, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 139, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45), 0 0 25px 0 rgba(0, 240, 139, 0.08);
+}
+
+.glass-navbar {
+  background: rgba(8, 9, 13, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle grid texture overlay */
+.bg-grid-pattern {
+  background-size: 44px 44px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+
